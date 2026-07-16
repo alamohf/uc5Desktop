@@ -1,0 +1,33 @@
+{
+  "name": "uc5desktop",
+  "version": "1.0.0",
+  "description": "Projeto integrador da unidade 5 - desktop",
+  "keywords": [],
+  "homepage": "https://github.com/alamohf/uc5Desktop#readme",
+  "bugs": {
+    "url": "https://github.com/alamohf/uc5Desktop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alamohf/uc5Desktop.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "tslint": "^5.20.1",
+    "typescript": "^7.0.2"
+  },
+  "files": [
+    "./bin/*",
+    "./lib/*"
+  ],
+  "typings": "./lib/index.d.ts"
+}
