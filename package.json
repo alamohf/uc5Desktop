@@ -14,20 +14,25 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "./lib/index.js",
+  "main": "./lib/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "lint": "tslint -c tslint.json src/**/*.ts",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "start": "npm run build && electron ."
   },
   "dependencies": {
     "tslint": "^5.20.1",
     "typescript": "^7.0.2"
   },
   "files": [
-    "./bin/*",
-    "./lib/*"
+    "./lib/*",
+    "./public/*"
   ],
-  "typings": "./lib/index.d.ts"
+  "typings": "./lib/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "electron": "^43.1.1"
+  }
 }
