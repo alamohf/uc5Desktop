@@ -14,25 +14,29 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "./lib/main.js",
+  "main": "./out/main/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
     "lint": "tslint -c tslint.json src/**/*.ts",
     "prepublish": "npm run build",
-    "start": "npm run build && electron ."
+    "start": "electron-vite preview"
   },
   "dependencies": {
+    "dotenv": "^17.4.2",
+    "pg": "^8.22.0",
     "tslint": "^5.20.1",
     "typescript": "^7.0.2"
   },
   "files": [
-    "./lib/*",
-    "./public/*"
+    "./out/*"
   ],
-  "typings": "./lib/index.d.ts",
   "devDependencies": {
     "@types/node": "^26.1.1",
-    "electron": "^43.1.1"
+    "@types/pg": "^8.20.0",
+    "electron": "^43.1.1",
+    "electron-vite": "5.0.0",
+    "vite": "7.3.6"
   }
 }
